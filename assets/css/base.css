@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap");
+
+:root {
+  --background: #ffffff;
+  --foreground: #6e07f3;
+  --primary: #141c3a;
+  --primary-light: #f2eff6;
+  --primary-foreground: #fff;
+  --secondary: #5be9b9;
+  --secondary-foreground: #141c3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Cantarell", "sans-serif";
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
