@@ -41,3 +41,8 @@ html {
   background-color: var(--foreground);
   color: var(--primary-foreground);
 }
+
+.title {
+  font-family: "Fjalla One";
+  font-weight: 700;
+}

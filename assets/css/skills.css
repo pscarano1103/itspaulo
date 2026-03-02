@@ -26,7 +26,6 @@
 
 .skills .skill:last-child {
   border-right: 0;
-  border-bottom: 0;
 }
 
 /*SKILL ITEM*/
@@ -75,7 +74,6 @@
   }
 
   .skills .skill {
-    border-bottom: 0;
     border-right: 1px solid #c7c7c7;
   }
 }
