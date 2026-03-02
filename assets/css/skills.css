@@ -19,7 +19,7 @@
 .skills .skill {
   text-align: center;
   border-right: 0;
-  border-bottom: 1px solid var(--primary-light);
+  border-bottom: 1px solid #c7c7c7;
   color: var(--primary);
   padding: 5rem 2rem;
 }
@@ -29,6 +29,46 @@
   border-bottom: 0;
 }
 
+/*SKILL ITEM*/
+.skill-icon {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  margin: auto;
+}
+
+.skill-icon img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.skill-title {
+  font-family: "Fjalla One";
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+.skill-desc {
+  font-size: 1.7rem;
+}
+
+.skill-sub {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: var(--foreground);
+}
+
+.skill-txt {
+  font-size: 1.7rem;
+}
+
 @media (width>600px) {
   .skills .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -36,6 +76,6 @@
 
   .skills .skill {
     border-bottom: 0;
-    border-right: 1px solid var(--primary-light);
+    border-right: 1px solid #c7c7c7;
   }
 }
