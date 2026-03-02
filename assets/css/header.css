@@ -44,6 +44,16 @@ header nav {
   padding: 2rem;
 }
 
+header nav a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+header nav.opened {
+  display: flex;
+}
+
 @media (width > 600px) {
   header {
     flex-direction: row;
