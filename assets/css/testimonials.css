@@ -1,0 +1,17 @@
+.testimonials {
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.testimonials .title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials .subtitle {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
