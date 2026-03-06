@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap");
+@import url(header.css);
+@import url(hero.css);
+@import url(intro.css);
+@import url(skills.css);
+@import url(recent-work.css);
+@import url(worked-with.css);
+@import url(colab.css);
+@import url(testimonials.css);
+@import url(cta.css);
+@import url(footer.css);
 
 :root {
   --background: #ffffff;
