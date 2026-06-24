@@ -1,17 +1,12 @@
 import styled from "styled-components";
-
-export const Container = styled.div`
-  max-width: 1280px;
-  margin: auto;
-`;
+import { Link as Reactlink } from "react-router-dom";
 
 /* Hero Section */
 export const Hero = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //gap: 80px;
-  height: 100vh;
+  height: calc(100vh - 100px);
 
   h1 {
     font-size: 100px;
@@ -67,26 +62,14 @@ export const ImagePerfil = styled.img`
   border-top-left-radius: 20px;
 `;
 
-/* Project Section */
-
-export const FeatureProjects = styled.section`
-  padding: 80px 0;
-`;
-
+/* About Section */
 export const TitleSection = styled.h2`
   font-size: 76px;
 `;
 
-export const DescriptionSection = styled.p`
-  font-size: 18px;
-  max-width: 600px;
-`;
-
-/* About Section */
-
 export const AboutSection = styled.section`
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 100px);
   padding: 80px 0;
   .title-about {
     width: 40%;
@@ -98,22 +81,22 @@ export const InfoAbout = styled.div`
   flex-direction: column;
   gap: 16px;
   width: 60%;
+`;
 
-  a {
-    margin-top: 35px;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: 4px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    color: #d3e97a;
-    transition: all 0.3s;
+export const Link = styled(Reactlink)`
+  margin-top: 35px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #d3e97a;
+  transition: all 0.3s;
 
-    &:hover {
-      opacity: 0.7;
-    }
+  &:hover {
+    opacity: 0.7;
   }
 `;
 

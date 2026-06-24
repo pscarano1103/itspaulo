@@ -1,24 +1,27 @@
+import { useNavigate } from "react-router-dom";
 import {
-  Container,
   ContainerButtons,
   ContainerInfo,
   ImagePerfil,
   Hero,
-  FeatureProjects,
   TitleSection,
-  DescriptionSection,
   AboutSection,
   AboutSubTitle,
   AboutDescription,
   InfoAbout,
+  Link,
 } from "./styles";
 import Perfil from "../../assets/perfil.png";
 
 import { Button } from "../../components/Button";
 
 export function Home() {
+  const navigate = useNavigate();
+
+  const handleNavigateToWork = () => navigate("/work");
+
   return (
-    <Container>
+    <div className="container">
       <Hero>
         <ContainerInfo>
           <h1>
@@ -31,17 +34,14 @@ export function Home() {
           </p>
 
           <ContainerButtons>
-            <Button>Ver Projetos</Button>
+            <Button onClick={handleNavigateToWork}>Ver Projetos</Button>
             <a
               href="https://www.linkedin.com/in/opauloscarano/"
               target="_blank"
             >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a
-              href="https://www.linkedin.com/in/opauloscarano/"
-              target="_blank"
-            >
+            <a href="https://github.com/pscarano1103" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
           </ContainerButtons>
@@ -50,16 +50,8 @@ export function Home() {
         <ImagePerfil src={Perfil} />
       </Hero>
 
-      <FeatureProjects>
-        <TitleSection>Meus Projetos</TitleSection>
-        <DescriptionSection>
-          Here are some of the selected projects that showcase my passion for
-          front-end development.
-        </DescriptionSection>
-      </FeatureProjects>
-
       <AboutSection>
-        <TitleSection className="title-about">Sobre</TitleSection>
+        <TitleSection className="title-about">Quem sou?</TitleSection>
 
         <InfoAbout>
           <AboutSubTitle>
@@ -73,9 +65,9 @@ export function Home() {
             de experiências digitais excepcionais.
           </AboutDescription>
 
-          <a href="">saiba mais</a>
+          <Link to="/work">saiba mais</Link>
         </InfoAbout>
       </AboutSection>
-    </Container>
+    </div>
   );
 }
