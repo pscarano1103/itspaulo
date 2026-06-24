@@ -11,7 +11,7 @@ export function Header() {
       <Navigation>
         <ul>
           <li>
-            <Link to="/work">Work</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/">Sobre</Link>
