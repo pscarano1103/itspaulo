@@ -3,7 +3,6 @@ import {
   ContainerInfo,
   ImagePerfil,
   Hero,
-  TitleSection,
   AboutSection,
   AboutSubTitle,
   AboutDescription,
@@ -51,7 +50,7 @@ export function Home() {
       </Hero>
 
       <AboutSection>
-        <TitleSection className="title-about">Quem sou?</TitleSection>
+        <h2 className="title-section title-about">Quem sou?</h2>
 
         <InfoAbout>
           <AboutSubTitle>
@@ -70,7 +69,7 @@ export function Home() {
       </AboutSection>
 
       <FeatureProjects id="projects">
-        <TitleSection>Meus Projetos</TitleSection>
+        <h2 className="title-section">Meus Projetos</h2>
         <DescriptionSection>
           Here are some of the selected projects that showcase my passion for
           front-end development.

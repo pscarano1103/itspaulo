@@ -30,6 +30,10 @@ const globalStyles = createGlobalStyle`
         max-width: 1280px;
         margin: auto;
     }
+
+    .title-section {
+        font-size: 76px;
+    }
 `;
 
 export default globalStyles;

@@ -63,10 +63,6 @@ export const ImagePerfil = styled.img`
 `;
 
 /* About Section */
-export const TitleSection = styled.h2`
-  font-size: 76px;
-`;
-
 export const AboutSection = styled.section`
   display: flex;
   padding: 80px 0;

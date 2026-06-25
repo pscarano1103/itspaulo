@@ -17,7 +17,7 @@ export function Header() {
             <Link to="/">Sobre</Link>
           </li>
           <li>
-            <Link to="/">Contato</Link>
+            <Link to="/contact">Contato</Link>
           </li>
         </ul>
       </Navigation>
