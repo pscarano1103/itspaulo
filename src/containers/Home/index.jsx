@@ -12,20 +12,12 @@ import {
   FeatureProjects,
   DescriptionSection,
   CardContainer,
-  CardItem,
-  ImageProject,
-  InfoProject,
-  TitleProject,
-  DescriptionProject,
-  SpecsProject,
-  TableSpecs,
-  ImageArea,
-  LinksProject,
 } from "./styles";
 import Perfil from "../../assets/perfil.png";
-import Projeto1 from "../../assets/projeto-image1.png";
 
 import { Button } from "../../components/Button";
+import { ProjectCard } from "../../components/ProjectCard";
+import { projects } from "../../utils/infoCard";
 
 export function Home() {
   return (
@@ -42,7 +34,7 @@ export function Home() {
           </p>
 
           <ContainerButtons>
-            <Button>Ver Projetos</Button>
+            <Button>Vamos conversar</Button>
             <a
               href="https://www.linkedin.com/in/opauloscarano/"
               target="_blank"
@@ -73,7 +65,7 @@ export function Home() {
             de experiências digitais excepcionais.
           </AboutDescription>
 
-          <Link to="/work">saiba mais</Link>
+          <Link to="/">saiba mais</Link>
         </InfoAbout>
       </AboutSection>
 
@@ -85,57 +77,9 @@ export function Home() {
         </DescriptionSection>
 
         <CardContainer>
-          <CardItem>
-            <ImageArea>
-              <ImageProject src={Projeto1} />
-            </ImageArea>
-            <InfoProject>
-              <TitleProject>
-                Promotional landing page for our favorite show
-              </TitleProject>
-              <DescriptionProject>
-                Teamed up with a designer to breathe life into a promotional
-                webpage for our beloved show, Adventure Time. Delivered a fully
-                responsive design with dynamic content capabilities, seamlessly
-                integrating a newsletter feature to keep fans updated with the
-                latest adventures.
-              </DescriptionProject>
-
-              <SpecsProject>
-                <p>PROJECTS INFO</p>
-                <TableSpecs>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span>Year</span>
-                      </td>
-                      <td className="item2">
-                        <span>2026</span>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <span>Technologies</span>
-                      </td>
-                      <td className="item2">
-                        <span>HTML, CSS, Javascript</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </TableSpecs>
-              </SpecsProject>
-
-              <LinksProject>
-                <a href="">
-                  Live Demo <i class="fa-solid fa-location-arrow"></i>
-                </a>
-                <a href="">
-                  See on Github <i class="fa-brands fa-github"></i>
-                </a>
-              </LinksProject>
-            </InfoProject>
-          </CardItem>
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </CardContainer>
       </FeatureProjects>
     </div>
