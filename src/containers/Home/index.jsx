@@ -16,9 +16,17 @@ import Perfil from "../../assets/perfil.png";
 
 import { Button } from "../../components/Button";
 import { ProjectCard } from "../../components/ProjectCard";
+import { Contato } from "../../components/Contato";
 import { projects } from "../../utils/infoCard";
 
 export function Home() {
+  const scrollToProjects = () => {
+    const section = document.getElementById("contact");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="container">
       <Hero>
@@ -33,7 +41,7 @@ export function Home() {
           </p>
 
           <ContainerButtons>
-            <Button>Vamos conversar</Button>
+            <Button onClick={scrollToProjects}>Vamos conversar</Button>
             <a
               href="https://www.linkedin.com/in/opauloscarano/"
               target="_blank"
@@ -54,17 +62,17 @@ export function Home() {
 
         <InfoAbout>
           <AboutSubTitle>
-            I am a front-end developer based in Sydney. Has Mechanical
-            Engineering background.
+            Desenvolvedor Front End apaixonado por interfaces modernas e
+            atraentes.
           </AboutSubTitle>
           <AboutDescription>
             Desenvolvedor Front-end com experiência em criação de interfaces
             responsivas e modernas. Buscando oportunidades para aplicar minhas
-            habilidades em React.js e JavaScript, com foco em inovação e entrega
-            de experiências digitais excepcionais.
+            habilidades em React.js e bibliotecas de CSS, com foco em inovação e
+            entrega de experiências digitais excepcionais.
           </AboutDescription>
 
-          <Link to="/">saiba mais</Link>
+          <Link to="/about">saiba mais</Link>
         </InfoAbout>
       </AboutSection>
 
@@ -81,6 +89,8 @@ export function Home() {
           ))}
         </CardContainer>
       </FeatureProjects>
+
+      <Contato />
     </div>
   );
 }

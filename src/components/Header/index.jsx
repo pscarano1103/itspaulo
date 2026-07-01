@@ -2,6 +2,13 @@ import { Container, Navigation } from "./styles";
 import { Link } from "react-router-dom";
 
 export function Header() {
+  const scrollToProjects = () => {
+    const section = document.getElementById("contact");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Container>
       <Link to="/" className="logo-scarano">
@@ -14,10 +21,10 @@ export function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Sobre</Link>
+            <Link to="/about">Sobre</Link>
           </li>
           <li>
-            <Link to="/contact">Contato</Link>
+            <a onClick={scrollToProjects}>Contato</a>
           </li>
         </ul>
       </Navigation>

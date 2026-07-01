@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button";
+import { Button } from "../Button";
 import {
   ContainerContact,
   ContainerLinks,
@@ -8,7 +8,7 @@ import {
 
 export function Contato() {
   return (
-    <ContainerContact className="container">
+    <ContainerContact className="container" id="contact">
       <InfoContactSection>
         <h2 className="title-section">Entre em contato</h2>
 
@@ -29,18 +29,21 @@ export function Contato() {
 
       <FormSection>
         <form>
-          <label>Nome:</label>
+          <label>Nome</label>
           <input type="text" name="name" required />
 
-          <label>E-mail:</label>
+          <label>E-mail</label>
           <input type="email" name="email" required />
+
+          <label>Assunto</label>
+          <input type="text" name="assunto" required />
 
           <label>Mensagem:</label>
           <textarea name="message" required />
 
-          <Button type="submit">Enviar</Button>
-
-          {status && <p>{status}</p>}
+          <Button type="submit" className="ButtonForm">
+            Enviar
+          </Button>
         </form>
       </FormSection>
     </ContainerContact>

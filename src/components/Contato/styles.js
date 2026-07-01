@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ContainerContact = styled.div`
   display: flex;
-  height: calc(100vh - 102px);
-  padding-top: 20px;
+  padding-top: 120px;
+  scroll-margin-top: 80px;
 `;
 export const InfoContactSection = styled.div`
   display: flex;
@@ -31,11 +31,41 @@ export const ContainerLinks = styled.div`
 `;
 export const FormSection = styled.div`
   width: 60%;
+
   form {
     max-width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    label {
+      font-size: 16px;
+      margin-top: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    input {
+      height: 50px;
+      border: 0;
+      background-color: #1a1a1a;
+      padding: 12px 16px;
+    }
+
+    textarea {
+      height: 150px;
+      border: 0;
+      background-color: #1a1a1a;
+      resize: none;
+      margin-bottom: 30px;
+    }
+
+    .ButtonForm {
+      display: block;
+      width: 25%;
+    }
   }
 `;
