@@ -26,7 +26,7 @@ export const Navigation = styled.nav`
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.15);
+      transform: scale(1.12);
     }
   }
 
@@ -37,5 +37,21 @@ export const Navigation = styled.nav`
     &:hover {
       color: #d3e97a;
     }
+  }
+
+  .contato-cta {
+    background-color: #333;
+    color: #d3e97a;
+    padding: 10px 14px;
+    border-radius: 28px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #d3e97a;
+      color: #0a0a0a;
+    }
+  }
+
+  .active {
+    color: #d3e97a;
   }
 `;

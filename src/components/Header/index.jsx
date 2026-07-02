@@ -1,5 +1,5 @@
 import { Container, Navigation } from "./styles";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export function Header() {
   const scrollToProjects = () => {
@@ -18,13 +18,25 @@ export function Header() {
       <Navigation>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">Sobre</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Sobre
+            </NavLink>
           </li>
           <li>
-            <a onClick={scrollToProjects}>Contato</a>
+            <a onClick={scrollToProjects} className="contato-cta">
+              Contato
+            </a>
           </li>
         </ul>
       </Navigation>
