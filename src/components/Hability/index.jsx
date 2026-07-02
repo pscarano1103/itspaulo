@@ -1,5 +1,5 @@
-import { Hability } from "./styles";
+import { Item } from "./styles";
 
-export function Button({ children, ...props }) {
-  return <Hability {...props}>{children}</Hability>;
+export function Hability({ children, ...props }) {
+  return <Item {...props}>{children}</Item>;
 }

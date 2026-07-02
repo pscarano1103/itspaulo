@@ -32,6 +32,7 @@ const globalStyles = createGlobalStyle`
     }
 
     .title-section {
+        flex: 1;
         font-size: 76px;
     }
 `;

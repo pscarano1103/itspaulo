@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Hability = styled.p`
+export const Item = styled.p`
   display: inline-block;
   font-size: 16px;
   font-weight: 400;

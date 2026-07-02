@@ -1,14 +1,14 @@
 import { Button } from "../Button";
 import {
-  ContainerContact,
   ContainerLinks,
   FormSection,
   InfoContactSection,
+  ContactSection,
 } from "./styles";
 
 export function Contato() {
   return (
-    <ContainerContact className="container" id="contact">
+    <ContactSection id="contact">
       <InfoContactSection>
         <h2 className="title-section">Entre em contato</h2>
 
@@ -46,6 +46,6 @@ export function Contato() {
           </Button>
         </form>
       </FormSection>
-    </ContainerContact>
+    </ContactSection>
   );
 }

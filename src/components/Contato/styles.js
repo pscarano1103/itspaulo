@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
-export const ContainerContact = styled.div`
+export const ContactSection = styled.div`
   display: flex;
-  padding-top: 120px;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 110px;
 `;
+
 export const InfoContactSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 40%;
+  flex: 1;
+
+  .title-section {
+    flex: 0;
+  }
   p {
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
 export const ContainerLinks = styled.div`
@@ -19,18 +22,30 @@ export const ContainerLinks = styled.div`
   margin-top: 24px;
   gap: 24px;
 
-  a i {
-    font-size: 25px;
-    color: #d3e97a;
+  a {
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #222;
     transition: all 0.3s ease-in-out;
+    i {
+      background-color: transparent;
+      color: #d3e97a;
+      transition: all 0.3s ease-in-out;
+    }
 
     &:hover {
-      transform: scale(1.2);
+      background-color: #d3e97a;
+      color: #0a0a0a;
+
+      i {
+        color: #0a0a0a;
+      }
     }
   }
 `;
 export const FormSection = styled.div`
-  width: 60%;
+  flex: 1;
 
   form {
     max-width: 80%;
