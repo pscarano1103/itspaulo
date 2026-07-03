@@ -12,9 +12,31 @@ import {
 
 export function ProjectCard({ project }) {
   return (
-    <CardItem>
+    <CardItem
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      whileHover={{
+        boxShadow: "0 20px 60px rgba(211, 233, 122,.25)",
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        delay: 0.2,
+        duration: 0.7,
+      }}
+    >
       <ImageArea>
-        <ImageProject src={project.image} />
+        <ImageProject
+          src={project.image}
+          whileHover={{
+            scale: [1, 1.02, 1],
+          }}
+          transition={{ duration: 0.95 }}
+        />
       </ImageArea>
       <InfoProject>
         <TitleProject>{project.title}</TitleProject>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import styled from "styled-components";
 
 export const Hero = styled.section`
@@ -35,12 +36,12 @@ export const ContainerButtons = styled.div`
     font-size: 18px;
     padding: 20px;
     border-radius: 50%;
-    background-color: #222;
-    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    transition: all 0.2s ease;
     i {
       background-color: transparent;
       color: #d3e97a;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease;
     }
 
     &:hover {
@@ -54,7 +55,7 @@ export const ContainerButtons = styled.div`
   }
 `;
 
-export const ImagePerfil = styled.img`
+export const ImagePerfil = styled(motion.img)`
   max-width: 600px;
   background-color: #c7c7c7;
   border-top-right-radius: 20px;

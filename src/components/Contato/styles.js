@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const ContactSection = styled.div`
+import { motion } from "motion/react";
+export const ContactSection = styled(motion.div)`
   display: flex;
   scroll-margin-top: 110px;
 `;

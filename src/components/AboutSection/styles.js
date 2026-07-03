@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Link as Reactlink } from "react-router-dom";
-
+import { motion } from "motion/react";
 /* About Section */
-export const AboutContainer = styled.section`
+export const AboutContainer = styled(motion.section)`
   display: flex;
   .title-about {
     width: 40%;

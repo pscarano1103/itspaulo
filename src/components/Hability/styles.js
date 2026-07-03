@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const Item = styled.p`
+import { motion } from "framer-motion";
+export const Item = styled(motion.p)`
   display: inline-block;
   font-size: 16px;
   font-weight: 400;

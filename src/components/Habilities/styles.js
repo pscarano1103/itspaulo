@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "motion/react";
 
-export const HabilitiesSection = styled.div`
+export const HabilitiesSection = styled(motion.div)`
   display: flex;
 `;
 export const HabilitiesInfo = styled.div`

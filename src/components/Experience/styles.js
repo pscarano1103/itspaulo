@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "motion/react";
 
-export const ExperienceSection = styled.div`
+export const ExperienceSection = styled(motion.div)`
   display: flex;
 `;
 export const Experiencelist = styled.div`

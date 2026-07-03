@@ -4,13 +4,17 @@ import { ProjectsSection } from "../../components/ProjectSection";
 import { Contato } from "../../components/Contato";
 import { ContainerSobre } from "./styles";
 
+import PageTransition from "../../components/PageTransition";
+
 export function Home() {
   return (
-    <ContainerSobre className="container">
-      <HeroSection />
-      <ProjectsSection />
-      <AboutSection />
-      <Contato />
-    </ContainerSobre>
+    <PageTransition>
+      <ContainerSobre className="container">
+        <HeroSection />
+        <ProjectsSection />
+        <AboutSection />
+        <Contato />
+      </ContainerSobre>
+    </PageTransition>
   );
 }

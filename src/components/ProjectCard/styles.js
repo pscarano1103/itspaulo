@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { motion } from "motion/react";
 
-export const CardItem = styled.div`
+export const CardItem = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 40px;
+  border-radius: 12px;
+  padding-right: 15px;
 `;
 
 export const ImageArea = styled.div`
@@ -14,7 +17,7 @@ export const ImageArea = styled.div`
   justify-content: center;
   border-radius: 12px;
 `;
-export const ImageProject = styled.img`
+export const ImageProject = styled(motion.img)`
   width: 500px;
   border-radius: 12px;
   margin: 100px 0;
@@ -55,11 +58,11 @@ export const TableSpecs = styled.table`
 
   tbody tr td {
     border-bottom: 1px solid #cacaca;
-    padding: 16px 0;
+    padding: 16px 5px;
   }
   tbody tr .item2 {
     text-align: right;
-
+    padding: 0 10px;
     span {
       color: #d3e97a;
     }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const ContainerButton = styled.button`
+import { motion } from "motion/react";
+export const ContainerButton = styled(motion.button)`
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
@@ -12,7 +12,7 @@ export const ContainerButton = styled.button`
   display: flex;
   align-items: center;
   gap: 13px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease;
 
   &:hover {
     background-color: #222222;

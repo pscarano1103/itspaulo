@@ -8,7 +8,24 @@ import {
 
 export function Contato() {
   return (
-    <ContactSection id="contact">
+    <ContactSection
+      id="contact"
+      initial={{
+        opacity: 0,
+        y: 80,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 0.8,
+      }}
+    >
       <InfoContactSection>
         <h2 className="title-section">Entre em contato</h2>
 

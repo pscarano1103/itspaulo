@@ -1,5 +1,6 @@
 import { Container, Navigation } from "./styles";
 import { NavLink, Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 export function Header() {
   const scrollToProjects = () => {
@@ -17,27 +18,48 @@ export function Header() {
 
       <Navigation>
         <ul>
-          <li>
+          <motion.li
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+          >
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Home
             </NavLink>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+          >
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Sobre
             </NavLink>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+          >
             <a onClick={scrollToProjects} className="contato-cta">
               Contato
             </a>
-          </li>
+          </motion.li>
         </ul>
       </Navigation>
     </Container>

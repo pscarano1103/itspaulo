@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "motion/react";
 
-export const FeatureProjects = styled.section``;
+export const FeatureProjects = styled(motion.section)``;
 
 export const DescriptionSection = styled.p`
   font-size: 18px;

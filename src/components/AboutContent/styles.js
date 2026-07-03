@@ -5,10 +5,11 @@ export const AboutSection = styled.div`
   justify-content: center;
   margin-top: 20px;
   gap: 40px;
+  scroll-margin-top: 102px;
 
   img {
     width: 450px;
-    background-color: #8774bd;
+    background-color: #c7c7c7;
     border-radius: 16px;
   }
 `;
@@ -38,12 +39,12 @@ export const ContainerButtons = styled.div`
     font-size: 18px;
     padding: 20px;
     border-radius: 50%;
-    background-color: #222;
+    background-color: #333;
     transition: all 0.3s ease-in-out;
     i {
       background-color: transparent;
       color: #d3e97a;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease;
     }
 
     &:hover {

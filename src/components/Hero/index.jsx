@@ -1,6 +1,7 @@
 import Perfil from "../../assets/perfil.png";
 import { Button } from "../Button";
 import { ContainerButtons, ContainerInfo, Hero, ImagePerfil } from "./styles";
+import { motion } from "motion/react";
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -24,16 +25,47 @@ export function HeroSection() {
 
         <ContainerButtons>
           <Button onClick={scrollToProjects}>Vamos conversar</Button>
-          <a href="https://www.linkedin.com/in/opauloscarano/" target="_blank">
+          <motion.a
+            href="https://www.linkedin.com/in/opauloscarano/"
+            target="_blank"
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+          >
             <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/pscarano1103" target="_blank">
+          </motion.a>
+          <motion.a
+            href="https://github.com/pscarano1103"
+            target="_blank"
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+          >
             <i class="fa-brands fa-github"></i>
-          </a>
+          </motion.a>
         </ContainerButtons>
       </ContainerInfo>
 
-      <ImagePerfil src={Perfil} />
+      <ImagePerfil
+        src={Perfil}
+        initial={{
+          opacity: 0,
+          scale: 0.8,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          delay: 0.2,
+        }}
+      />
     </Hero>
   );
 }
