@@ -98,6 +98,7 @@ export const FormSection = styled.div`
       background-color: #444;
       resize: none;
       margin-bottom: 30px;
+      padding: 12px 16px;
     }
 
     .ButtonForm {

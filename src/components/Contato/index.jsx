@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "../Button";
 import {
   ContainerLinks,
@@ -5,8 +6,42 @@ import {
   InfoContactSection,
   ContactSection,
 } from "./styles";
+import emailjs from "@emailjs/browser";
 
 export function Contato() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email,
+      subject: subject,
+    };
+
+    emailjs
+      .send(
+        "service_j8imqxo",
+        "template_c92h1va",
+        templateParams,
+        "DI9jsKOf2BAfvmtJf",
+      )
+      .then(
+        () => {
+          setName("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
+        },
+        (err) => {
+          console.log("Erro: ", err);
+        },
+      );
+  }
   return (
     <ContactSection
       id="contact"
@@ -45,18 +80,41 @@ export function Contato() {
       </InfoContactSection>
 
       <FormSection>
-        <form>
+        <form onSubmit={sendEmail}>
           <label>Nome</label>
-          <input type="text" name="name" required />
+          <input
+            type="text"
+            name="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            required
+          />
 
           <label>E-mail</label>
-          <input type="email" name="email" required />
+          <input
+            type="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required
+          />
 
           <label>Assunto</label>
-          <input type="text" name="assunto" required />
+          <input
+            type="text"
+            name="assunto"
+            onChange={(e) => setSubject(e.target.value)}
+            value={subject}
+            required
+          />
 
           <label>Mensagem:</label>
-          <textarea name="message" required />
+          <textarea
+            name="message"
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+            required
+          />
 
           <Button type="submit" className="ButtonForm">
             Enviar
