@@ -15,7 +15,7 @@ export const ContainerButton = styled(motion.button)`
   transition: all 0.15s ease;
 
   &:hover {
-    background-color: #222222;
+    background-color: #444;
     color: #d3e97a;
   }
 `;

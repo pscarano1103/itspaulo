@@ -39,7 +39,7 @@ export const ContainerButtons = styled.div`
     font-size: 18px;
     padding: 20px;
     border-radius: 50%;
-    background-color: #333;
+    background-color: #444;
     transition: all 0.3s ease-in-out;
     i {
       background-color: transparent;

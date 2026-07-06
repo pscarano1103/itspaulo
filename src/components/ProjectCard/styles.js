@@ -10,7 +10,7 @@ export const CardItem = styled(motion.div)`
 `;
 
 export const ImageArea = styled.div`
-  background-color: #272727;
+  background-color: #444;
   width: 45%;
   display: flex;
   align-items: center;

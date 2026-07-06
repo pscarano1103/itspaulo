@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "motion/react";
 export const ContactSection = styled(motion.div)`
   display: flex;
-  scroll-margin-top: 110px;
+  scroll-margin-top: 30px;
 `;
 
 export const InfoContactSection = styled.div`
@@ -26,7 +26,7 @@ export const ContainerLinks = styled.div`
     font-size: 18px;
     padding: 20px;
     border-radius: 50%;
-    background-color: #222;
+    background-color: #444;
     transition: all 0.3s ease-in-out;
     i {
       background-color: transparent;
@@ -66,14 +66,14 @@ export const FormSection = styled.div`
     input {
       height: 50px;
       border: 0;
-      background-color: #1a1a1a;
+      background-color: #444;
       padding: 12px 16px;
     }
 
     textarea {
       height: 150px;
       border: 0;
-      background-color: #1a1a1a;
+      background-color: #444;
       resize: none;
       margin-bottom: 30px;
     }

@@ -30,7 +30,7 @@ export const Navigation = styled.nav`
   }
 
   .contato-cta {
-    background-color: #333;
+    background-color: #444;
     color: #d3e97a;
     padding: 10px 14px;
     border-radius: 28px;
