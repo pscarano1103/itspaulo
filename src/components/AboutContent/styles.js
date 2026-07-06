@@ -11,6 +11,23 @@ export const AboutSection = styled.div`
     width: 450px;
     background-color: #c7c7c7;
     border-radius: 16px;
+
+    @media (max-width: 1023px) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: auto;
+    padding: 24px 0 0;
   }
 `;
 
@@ -26,6 +43,22 @@ export const AboutInfo = styled.div`
 
   .about-desc {
     font-size: 18px;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    gap: 24px;
+
+    .about-title {
+      line-height: 130%;
+      width: 100%;
+    }
+
+    .about-desc {
+      font-size: 16px;
+      line-height: 200%;
+      width: 100%;
+    }
   }
 `;
 

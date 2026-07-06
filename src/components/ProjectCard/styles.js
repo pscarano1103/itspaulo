@@ -3,24 +3,50 @@ import { motion } from "motion/react";
 
 export const CardItem = styled(motion.div)`
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 40px;
   border-radius: 12px;
-  padding-right: 15px;
+  padding: 15px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 15px;
+  }
+
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
 `;
 
 export const ImageArea = styled.div`
-  background-color: #444;
-  width: 45%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  gap: 20px;
   border-radius: 12px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0px;
+  }
 `;
 export const ImageProject = styled(motion.img)`
   width: 500px;
+  max-width: 100%;
   border-radius: 12px;
-  margin: 100px 0;
+  margin: 0px 0;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const InfoProject = styled.div`
@@ -28,16 +54,29 @@ export const InfoProject = styled.div`
   flex-direction: column;
   width: 55%;
   gap: 16px;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
 `;
 
 export const TitleProject = styled.p`
   font-size: 32px;
   font-weight: 600;
+  color: #d3e97a;
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
 `;
 
 export const DescriptionProject = styled.p`
   font-size: 18px;
   line-height: 150%;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 `;
 
 export const SpecsProject = styled.div`
@@ -67,11 +106,20 @@ export const TableSpecs = styled.table`
       color: #d3e97a;
     }
   }
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+
+    tbody tr td {
+      padding: 12px 4px;
+    }
+  }
 `;
 
 export const LinksProject = styled.div`
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 
   a {
     margin-top: 35px;
@@ -90,6 +138,16 @@ export const LinksProject = styled.div`
     }
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 767px) {
+    gap: 12px;
+
+    a {
+      margin-top: 16px;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
   }
 `;

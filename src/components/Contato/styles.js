@@ -2,7 +2,13 @@ import styled from "styled-components";
 import { motion } from "motion/react";
 export const ContactSection = styled(motion.div)`
   display: flex;
+  gap: 40px;
   scroll-margin-top: 30px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 32px;
+  }
 `;
 
 export const InfoContactSection = styled.div`
@@ -16,11 +22,18 @@ export const InfoContactSection = styled.div`
   p {
     font-size: 20px;
   }
+
+  @media (max-width: 767px) {
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 export const ContainerLinks = styled.div`
   display: flex;
   margin-top: 24px;
   gap: 24px;
+  flex-wrap: wrap;
 
   a {
     font-size: 18px;
@@ -41,6 +54,15 @@ export const ContainerLinks = styled.div`
       i {
         color: #0a0a0a;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    gap: 16px;
+
+    a {
+      padding: 16px;
+      font-size: 16px;
     }
   }
 `;
@@ -81,6 +103,32 @@ export const FormSection = styled.div`
     .ButtonForm {
       display: block;
       width: 25%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    form {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    form {
+      gap: 8px;
+
+      input {
+        height: 46px;
+      }
+
+      textarea {
+        height: 120px;
+        margin-bottom: 20px;
+      }
+
+      .ButtonForm {
+        width: auto;
+        min-width: 140px;
+      }
     }
   }
 `;

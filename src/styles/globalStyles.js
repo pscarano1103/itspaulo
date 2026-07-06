@@ -12,6 +12,14 @@ const globalStyles = createGlobalStyle`
 
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
     button, a{
         cursor: pointer;
         text-decoration: none;
@@ -26,13 +34,31 @@ const globalStyles = createGlobalStyle`
 
 
     .container{
-        max-width: 1280px;
+        width: min(100%, 1280px);
         margin: auto;
+        padding: 0 24px;
     }
 
     .title-section {
         flex: 1;
-        font-size: 76px;
+        font-size: clamp(48px, 7vw, 76px);
+        line-height: 0.95;
+    }
+
+    @media (max-width: 1023px) {
+        .container {
+            padding: 0 24px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .container {
+            padding: 0 20px;
+        }
+
+        .title-section {
+            font-size: 42px;
+        }
     }
 `;
 

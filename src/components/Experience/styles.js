@@ -3,6 +3,14 @@ import { motion } from "motion/react";
 
 export const ExperienceSection = styled(motion.div)`
   display: flex;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: auto;
+    padding: 24px 0 0;
+  }
 `;
 export const Experiencelist = styled.div`
   display: flex;
@@ -28,10 +36,24 @@ export const ExperienceHead = styled.div`
     font-size: 18px;
     color: #d3e97a;
   }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 40px;
+    min-height: auto;
+    padding: 24px 0 0; */
+  }
 `;
 export const ExperienceDesc = styled.div`
   display: flex;
   flex-direction: column;
-
   gap: 10px;
+
+  @media (max-width: 1023px) {
+    .exp-desc {
+      gap: 25px;
+      line-height: 200%;
+    }
+  }
 `;

@@ -30,6 +30,7 @@ export function ProjectCard({ project }) {
       }}
     >
       <ImageArea>
+        <TitleProject>{project.title}</TitleProject>
         <ImageProject
           src={project.image}
           whileHover={{
@@ -39,7 +40,6 @@ export function ProjectCard({ project }) {
         />
       </ImageArea>
       <InfoProject>
-        <TitleProject>{project.title}</TitleProject>
         <DescriptionProject>{project.description}</DescriptionProject>
 
         <SpecsProject>

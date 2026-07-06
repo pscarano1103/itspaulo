@@ -18,4 +18,10 @@ export const ContainerButton = styled(motion.button)`
     background-color: #444;
     color: #d3e97a;
   }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    padding: 16px 18px;
+    gap: 10px;
+  }
 `;

@@ -1,14 +1,23 @@
-import { Container, Navigation } from "./styles";
+import { Container, Navigation, MenuButton } from "./styles";
 import { NavLink, Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const scrollToProjects = () => {
     const section = document.getElementById("contact");
 
     section?.scrollIntoView({
       behavior: "smooth",
     });
+
+    closeMenu();
   };
   return (
     <Container>
@@ -16,7 +25,18 @@ export function Header() {
         Paulo Scarano
       </Link>
 
-      <Navigation>
+      <MenuButton
+        type="button"
+        onClick={() => setIsMenuOpen((state) => !state)}
+        aria-label="Abrir menu"
+        aria-expanded={isMenuOpen}
+      >
+        <span />
+        <span />
+        <span />
+      </MenuButton>
+
+      <Navigation className={isMenuOpen ? "isMenuOpen" : ""}>
         <ul>
           <motion.li
             whileHover={{
@@ -29,6 +49,7 @@ export function Header() {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
             >
               Home
             </NavLink>
@@ -44,6 +65,7 @@ export function Header() {
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
             >
               Sobre
             </NavLink>
