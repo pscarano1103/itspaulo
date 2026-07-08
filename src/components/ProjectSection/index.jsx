@@ -24,8 +24,8 @@ export function ProjectsSection() {
     >
       <h2 className="title-section">Meus Projetos</h2>
       <DescriptionSection>
-        Here are some of the selected projects that showcase my passion for
-        front-end development.
+        Aqui estão alguns dos projetos selecionados que demonstram minha paixão
+        pelo desenvolvimento front-end.
       </DescriptionSection>
 
       <CardContainer>
